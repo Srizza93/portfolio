@@ -1,6 +1,6 @@
 <template>
-  <div class="content-container_page">
-    <span>ernsdczdomxe</span>
+  <div class="content-container_page contacts">
+    <span>contacts</span>
   </div>
 </template>
 
@@ -11,5 +11,7 @@ export default {
 </script>
 
 <style scoped>
-
+.selected-content {
+  display: flex;
+}
 </style>

@@ -1,6 +1,6 @@
 <template>
-  <div class="content-container_page">
-    <span>erndomxe</span>
+  <div class="content-container_page cv">
+    <span>cv</span>
   </div>
 </template>
 
@@ -11,5 +11,7 @@ export default {
 </script>
 
 <style scoped>
-
+.selected-content {
+  display: flex;
+}
 </style>

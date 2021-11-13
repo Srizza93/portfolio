@@ -35,18 +35,24 @@ export default {
   },
   methods: {
     selectTab(event) {
-      const selected = event.target;
+      const selectedTab = event.target;
+      const selectedContent = document.querySelector(
+        `.${selectedTab.innerHTML.toLowerCase()}`
+      );
       const tabs = document.querySelectorAll(".tab-container_tab-title");
       const contents = document.querySelectorAll(".content-container_page");
       tabs.forEach((tab) => tab.classList.remove("selected-tab"));
       contents.forEach((content) =>
         content.classList.remove("selected-content")
       );
-      selected.classList.add("selected-tab");
+      selectedTab.classList.add("selected-tab");
+      selectedContent.classList.add("selected-content");
     },
     openHomePage() {
-      const homePage = document.querySelector("[name='Home']");
-      homePage.classList.add("selected-tab");
+      const homePageTab = document.querySelector("[name='Home']");
+      const homePageContent = document.querySelector(".home");
+      homePageTab.classList.add("selected-tab");
+      homePageContent.classList.add("selected-content");
     },
   },
   mounted() {
@@ -60,7 +66,9 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: end;
+  position: relative;
   width: 100%;
+  height: 100px;
   padding: 10px 10px 0 10px;
 }
 .tab-container {
@@ -71,6 +79,7 @@ export default {
 .tab-container_tab-title {
   width: 100px;
   padding: 5px;
+  margin-top: auto;
   border-width: 1px 1px 0 1px;
   border-radius: 10px 10px 0 0;
   text-align: center;
