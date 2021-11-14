@@ -28,18 +28,18 @@ export default {
 .content-container_page-home {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   width: 100%;
   height: calc(100vh - 140px);
 }
 .presentation {
   display: flex;
   flex-direction: column;
-  width: 60%;
-  padding: 130px;
+  width: 300px;
 }
 .presentation_hello {
   position: absolute;
-  top: 280px;
+  top: 230px;
   margin-left: 5px;
 }
 .presentation_name {
@@ -54,10 +54,10 @@ export default {
 }
 .presentation_job {
   position: absolute;
-  top: 320px;
+  top: 250px;
   font-size: 25px;
   animation-name: presentation-job;
-  animation-duration: .2s;
+  animation-duration: 0.2s;
   animation-delay: 1.3s;
   animation-timing-function: linear;
   -webkit-animation-fill-mode: forwards;
@@ -66,26 +66,24 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 40%;
-  padding: 80px;
+  margin: 0 20px;
 }
 .bars-container-bar {
   position: relative;
   width: 20px;
   height: 215px;
   margin: 5px;
+  border: 1px solid #0e76a8;
   border-radius: 2px;
   animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 .blue-bar {
-  border: none;
   background-color: #0e76a8;
   animation-name: blue-bar-animation;
 }
 .white-bar {
-  border: 1px solid #0e76a8;
   animation-name: white-bar-animation;
 }
 .selected-content {
@@ -93,34 +91,28 @@ export default {
 }
 @keyframes blue-bar-animation {
   0% {
-    border: none;
     background-color: #0e76a8;
     top: 0;
   }
   50% {
-    border: 1px solid #0e76a8;
     background-color: white;
     top: 200px;
   }
   100% {
-    border: none;
     background-color: #0e76a8;
     top: 0;
   }
 }
 @keyframes white-bar-animation {
   0% {
-    border: 1px solid #0e76a8;
     background-color: white;
     top: 200px;
   }
   50% {
-    border: none;
     background-color: #0e76a8;
     top: 0;
   }
   100% {
-    border: 1px solid #0e76a8;
     background-color: white;
     top: 200px;
   }
@@ -134,18 +126,18 @@ export default {
     color: #0e76a8;
     transform: rotate(-5deg);
   }
-  
+
   100% {
     color: #0e76a8;
-    top: 320px;
+    top: 250px;
   }
 }
 @keyframes presentation-job {
   from {
-    top: 320px;
+    top: 250px;
   }
   to {
-    top: 370px;
+    top: 300px;
   }
 }
 </style>

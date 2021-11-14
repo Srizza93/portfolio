@@ -22,7 +22,7 @@ export default {
 <style>
 .content-container_page {
   display: none;
-  padding: 20px;
+  padding: 130px;
   background-color: white;
 }
 </style>

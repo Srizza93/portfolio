@@ -1,10 +1,11 @@
 <template>
   <div class="content-container_page portfolio">
     <div class="portfolio-container">
-      <div
+      <a
         class="portfolio-container_project-container"
         v-for="project in projects"
         :key="project.id"
+        :href="project.link"
       >
         <div class="portfolio-container_project-container_inner">
           <div class="portfolio-container_project-container_inner_front">
@@ -63,7 +64,7 @@
             >
           </div>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </template>
@@ -169,7 +170,6 @@ export default {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 130px;
 }
 .portfolio-container_project-container {
   background-color: transparent;
@@ -211,8 +211,8 @@ export default {
 /* Style the back side */
 .portfolio-container_project-container_inner_back {
   padding: 20px;
-  background-color: #f0f2f5;
-  color: black;
+  background-color: #0e76a8;
+  color: white;
   transform: rotateY(180deg);
 }
 .portfolio-container_project-container_inner_back_title {
