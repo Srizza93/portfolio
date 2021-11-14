@@ -22,7 +22,6 @@ export default {
 <style>
 .content-container_page {
   display: none;
-  height: 500px;
   padding: 20px;
   background-color: white;
 }

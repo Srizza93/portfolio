@@ -48,8 +48,8 @@ export default {
   font-size: 35px;
   font-weight: 600;
   animation-name: presentation-name;
-  animation-duration: 1s;
-  animation-timing-function: linear;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in;
   -webkit-animation-fill-mode: forwards;
 }
 .presentation_job {
@@ -58,7 +58,7 @@ export default {
   font-size: 25px;
   animation-name: presentation-job;
   animation-duration: .2s;
-  animation-delay: .75s;
+  animation-delay: 1.3s;
   animation-timing-function: linear;
   -webkit-animation-fill-mode: forwards;
 }
@@ -131,6 +131,7 @@ export default {
     top: 67px;
   }
   10% {
+    color: #0e76a8;
     transform: rotate(-5deg);
   }
   
