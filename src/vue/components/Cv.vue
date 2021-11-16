@@ -166,7 +166,7 @@ export default {
           name: "cv-ita",
           alt: "ita-flag",
           img: "ita-flag.png",
-          path: "https://srizza93.github.io/portfolio/src/downloads/ita-eng.pdf",
+          path: "https://srizza93.github.io/portfolio/src/downloads/cv-ita.pdf",
         },
       ],
     };
