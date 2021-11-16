@@ -25,41 +25,47 @@ export default {
 </script>
 
 <style scoped>
+.home {
+  padding: 0 130px 130px 130px;
+}
 .content-container_page-home {
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 100%;
-  height: calc(100vh - 140px);
 }
 .presentation {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
   width: 300px;
+  height: 400px;
 }
 .presentation_hello {
   position: absolute;
-  top: 230px;
-  margin-left: 5px;
+  top: 130px;
+  left: calc(50% - 37.27px);
 }
 .presentation_name {
   position: absolute;
-  top: 67px;
+  top: -60px;
+  left: calc(50% - 112.8px);
   font-size: 35px;
   font-weight: 600;
   animation-name: presentation-name;
-  animation-duration: 1.5s;
+  animation-duration: 2s;
   animation-timing-function: ease-in;
   -webkit-animation-fill-mode: forwards;
 }
 .presentation_job {
   position: absolute;
-  top: 250px;
+  top: 150px;
+  left: calc(50% - 110.48px);
   font-size: 25px;
   animation-name: presentation-job;
-  animation-duration: 0.2s;
-  animation-delay: 1.3s;
+  animation-duration: 0.5s;
+  animation-delay: 1.6s;
   animation-timing-function: linear;
   -webkit-animation-fill-mode: forwards;
 }
@@ -67,7 +73,8 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin: 0 20px;
+  height: 375px;
+  margin: 130px 20px;
 }
 .bars-container-bar {
   position: relative;
@@ -121,38 +128,49 @@ export default {
 @keyframes presentation-name {
   0% {
     color: white;
-    top: 67px;
+    top: -60px;
   }
   10% {
     color: #0e76a8;
     transform: rotate(-5deg);
   }
-
+  90% {
+    color: #0e76a8;
+    transform: rotate(10deg);
+  }
   100% {
     color: #0e76a8;
-    top: 250px;
+    top: 150px;
   }
 }
 @keyframes presentation-job {
   from {
-    top: 250px;
+    top: 150px;
   }
   to {
-    top: 300px;
+    top: 200px;
   }
 }
 
 @media screen and (max-width: 750px) {
   .home {
-    min-height: 700px;
+    padding: 0 0 130px 0;
   }
   .content-container_page-home {
     flex-direction: column;
     align-items: center;
   }
+  .presentation {
+    height: 300px;
+  }
 
   .bars-container {
-    margin: 100px 20px 0 20px;
+    margin: 20px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .presentation {
+    width: 280px;
   }
 }
 </style>
