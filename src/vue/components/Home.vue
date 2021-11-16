@@ -35,6 +35,7 @@ export default {
 .presentation {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 300px;
 }
 .presentation_hello {
@@ -77,7 +78,7 @@ export default {
   border-radius: 2px;
   animation-duration: 8s;
   animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  animation-timing-function: ease;
 }
 .blue-bar {
   background-color: #0e76a8;
@@ -96,7 +97,7 @@ export default {
   }
   50% {
     background-color: white;
-    top: 200px;
+    top: 150px;
   }
   100% {
     background-color: #0e76a8;
@@ -106,7 +107,7 @@ export default {
 @keyframes white-bar-animation {
   0% {
     background-color: white;
-    top: 200px;
+    top: 150px;
   }
   50% {
     background-color: #0e76a8;
@@ -114,7 +115,7 @@ export default {
   }
   100% {
     background-color: white;
-    top: 200px;
+    top: 150px;
   }
 }
 @keyframes presentation-name {
@@ -138,6 +139,20 @@ export default {
   }
   to {
     top: 300px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .home {
+    min-height: 700px;
+  }
+  .content-container_page-home {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bars-container {
+    margin: 100px 20px 0 20px;
   }
 }
 </style>

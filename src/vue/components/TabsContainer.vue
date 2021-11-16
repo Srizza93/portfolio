@@ -71,6 +71,13 @@ export default {
   height: 100px;
   padding: 10px 10px 0 10px;
 }
+.tabs-container::-webkit-scrollbar {
+  display: none;
+}
+.tabs-container {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
 .tab-container {
   display: flex;
   flex-direction: column;
@@ -94,5 +101,11 @@ export default {
 .selected-tab {
   background-color: white;
   opacity: 1;
+}
+@media screen and (max-width: 600px) {
+  .tabs-container {
+    justify-content: flex-start;
+    overflow-x: auto;
+  }
 }
 </style>

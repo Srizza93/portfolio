@@ -25,4 +25,9 @@ export default {
   padding: 130px;
   background-color: white;
 }
+@media screen and (max-width: 600px) {
+  .content-container_page {
+    padding: 100px 20px;
+  }
+}
 </style>

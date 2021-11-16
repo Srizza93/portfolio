@@ -244,4 +244,15 @@ export default {
 .selected-content {
   display: flex;
 }
+
+@media screen and (max-width: 600px) {
+  .portfolio-container_project-container{
+    width: 202px;
+    height: 250px;
+  }
+  .portfolio-container_project-container_project-img {
+    width: 200px;
+    height: 200px;
+  }
+}
 </style>
