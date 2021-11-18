@@ -1,70 +1,72 @@
 <template>
   <div class="content-container_page portfolio">
     <div class="portfolio-container">
-      <a
+      <div
         class="portfolio-container_project-container"
         v-for="project in projects"
         :key="project.id"
-        :href="project.link"
       >
-        <div class="portfolio-container_project-container_inner">
-          <div class="portfolio-container_project-container_inner_front">
-            <span class="portfolio-container_project-container_project-name">{{
-              project.name
-            }}</span>
-            <img
-              class="portfolio-container_project-container_project-img"
-              :src="getImgUrl(project.image)"
-            />
-          </div>
-          <div class="portfolio-container_project-container_inner_back">
-            <div
-              class="portfolio-container_project-container_inner_back-container"
-            >
-              <h4
-                class="portfolio-container_project-container_inner_back_title"
-              >
-                Description
-              </h4>
-              <span
-                class="
-                  portfolio-container_project-container_inner_back_description
-                "
-                >{{ project.description }}</span
-              >
-            </div>
-            <div
-              class="portfolio-container_project-container_inner_back-container"
-            >
-              <h4
-                class="portfolio-container_project-container_inner_back_title"
-              >
-                Tools
-              </h4>
-              <ul
-                class="portfolio-container_project-container_inner_back_tools"
-              >
-                <li
-                  class="
-                    portfolio-container_project-container_inner_back_tools_tool
-                  "
-                  v-for="(tool, index) in project.tools"
-                  :key="index + '/' + tool"
-                >
-                  {{ tool }}
-                </li>
-              </ul>
-            </div>
-            <a
-              class="
-                portfolio-container_project-container_inner_back_project-link
-              "
-              :href="project.link"
-              >Go to website</a
-            >
-          </div>
+        <div class="portfolio-container_project-container_flip-container">
+          Description
         </div>
-      </a>
+        <a :href="project.link">
+          <div class="portfolio-container_project-container_inner">
+            <div class="portfolio-container_project-container_inner_front">
+              <span
+                class="portfolio-container_project-container_project-name"
+                >{{ project.name }}</span
+              >
+              <img
+                class="portfolio-container_project-container_project-img"
+                :src="getImgUrl(project.image)"
+              />
+            </div>
+            <div class="portfolio-container_project-container_inner_back">
+              <div
+                class="
+                  portfolio-container_project-container_inner_back-container
+                "
+              >
+                <h4
+                  class="portfolio-container_project-container_inner_back_title"
+                >
+                  Description
+                </h4>
+                <span
+                  class="
+                    portfolio-container_project-container_inner_back_description
+                  "
+                  >{{ project.description }}</span
+                >
+              </div>
+              <div
+                class="
+                  portfolio-container_project-container_inner_back-container
+                "
+              >
+                <h4
+                  class="portfolio-container_project-container_inner_back_title"
+                >
+                  Tools
+                </h4>
+                <ul
+                  class="portfolio-container_project-container_inner_back_tools"
+                >
+                  <li
+                    class="
+                      portfolio-container_project-container_inner_back_tools_tool
+                    "
+                    v-for="(tool, index) in project.tools"
+                    :key="index + '/' + tool"
+                  >
+                    {{ tool }}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -175,7 +177,7 @@ export default {
   background-color: transparent;
   width: 302px;
   height: 350px;
-  margin: 10px;
+  margin: 40px 10px;
   border: 1px solid #d3d3d3;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
@@ -184,7 +186,7 @@ export default {
 .portfolio-container_project-container_inner {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }
@@ -192,10 +194,9 @@ export default {
 .portfolio-container_project-container_inner_back {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 350px;
   -webkit-backface-visibility: hidden; /* Safari */
   backface-visibility: hidden;
 }
@@ -204,16 +205,18 @@ export default {
   transform: rotateY(180deg);
 }
 .portfolio-container_project-container_inner_front {
+  justify-content: space-between;
   background-color: white;
   color: black;
 }
-
-/* Style the back side */
 .portfolio-container_project-container_inner_back {
   padding: 20px;
   background-color: #0e76a8;
   color: white;
   transform: rotateY(180deg);
+}
+.portfolio-container_project-container_inner_back-container {
+  margin-bottom: 20px;
 }
 .portfolio-container_project-container_inner_back_title {
   margin: 0 0 5px 0;
@@ -229,26 +232,47 @@ export default {
   padding: 10px;
   font-size: 21px;
 }
+.portfolio-container_project-container_flip-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  padding: 5px;
+  border-radius: 10px 10px 0 0;
+  background-color: #0e76a8;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+}
 .portfolio-container_project-container_project-img {
   width: 300px;
   height: 300px;
 }
-.portfolio-container_project-container_inner_back_project-link {
-  padding: 10px 0;
-  color: #0e76a8;
-  text-decoration: none;
-}
-.portfolio-container_project-container_inner_back_project-link:hover {
-  text-decoration: underline;
-}
 .selected-content {
   display: flex;
 }
+.flip-card {
+  transform: rotate(0deg);
+}
 
-@media screen and (max-width: 600px) {
-  .portfolio-container_project-container{
+@media screen and (max-width: 450px) {
+  .portfolio-container_project-container {
+    height: 400px;
+    border-radius: 10px 10px 0 0;
+  }
+  .portfolio-container_project-container_flip-container {
+    display: flex;
+  }
+}
+@media screen and (max-width: 350px) {
+  .portfolio-container_project-container {
+    height: 350px;
     width: 202px;
-    height: 250px;
+  }
+  .portfolio-container_project-container_inner_front,
+  .portfolio-container_project-container_inner_back {
+    height: 300px;
   }
   .portfolio-container_project-container_project-img {
     width: 200px;
