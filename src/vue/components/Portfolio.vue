@@ -46,6 +46,25 @@
               >
                 <h4
                   class="portfolio-container_project-container_inner_back_title"
+                  v-if="project.functionalities"
+                >
+                  Functionalities
+                </h4>
+                <ul
+                  class="portfolio-container_project-container_inner_back_tools"
+                >
+                  <li
+                    class="
+                      portfolio-container_project-container_inner_back_tools_tool
+                    "
+                    v-for="(functionality, index) in project.functionalities"
+                    :key="index + '/' + functionality"
+                  >
+                    {{ functionality }}
+                  </li>
+                </ul>
+                <h4
+                  class="portfolio-container_project-container_inner_back_title"
                 >
                   Tools
                 </h4>
@@ -84,6 +103,15 @@ export default {
           link: "https://srizza93.github.io/social/deploy/index.html",
           description:
             "Social Network - Purely Frontend - Responsive - Mocked functions",
+          functionalities: [
+            "API data rendering",
+            "Navigation bar filtering",
+            "Profile page access",
+            "Notification system",
+            "Posts and comments publication",
+            "Chat system",
+            "Chat storing",
+          ],
           tools: [
             "Webpack",
             "HTML",
@@ -101,6 +129,15 @@ export default {
           image: "streaming.png",
           link: "https://srizza93.github.io/streaming/deploy/index.html",
           description: "Movie Streaming website - Purely Frontend - Responsive",
+          functionalities: [
+            "API data rendering",
+            "Search bar filtering",
+            "Notification system",
+            "Sign up page",
+            "Trailer watching",
+            "Movie details access",
+            "Movie player access",
+          ],
           tools: [
             "Webpack",
             "HTML",
@@ -118,6 +155,18 @@ export default {
           image: "e-commerce.png",
           link: "https://srizza93.github.io/e-commerce/deploy/index.html",
           description: "E-commerce website - Purely Frontend - Responsive",
+          functionalities: [
+            "Navigation bar filtering",
+            "Gallery playing",
+            "Cart access and functionality",
+            "Products filtering and sort system",
+            "Product details page",
+            "Purchase process",
+            "Personal info validation",
+            "Credit card validation",
+            "Loading page",
+            "Purchase confirmation",
+          ],
           tools: [
             "Webpack",
             "HTML",
@@ -136,6 +185,14 @@ export default {
           link: "https://srizza93.github.io/tooltip/",
           description:
             "A tool tip plugin with specific conditions and optional tasks - Responsive",
+          functionalities: [
+            "Custom content re-usability",
+            "Unlimited size",
+            "Respect viewport boundaries",
+            "Activation on dynamically loaded content",
+            "Possible to select the inner text",
+            "Centering",
+          ],
           tools: ["HTML", "CSS", "JS"],
         },
         {
@@ -144,6 +201,13 @@ export default {
           image: "square-task.png",
           link: "https://srizza93.github.io/square_task/",
           description: "Square following mouse",
+          functionalities: [
+            "Square catching mouse",
+            "Square increase its size when it comes closer",
+            "Square respects window edges",
+            "Speed increase on mouse in the outer square",
+            "Speed decrease on mouse out the outer square",
+          ],
           tools: ["HTML", "CSS", "JS"],
         },
         {
@@ -214,6 +278,7 @@ export default {
   background-color: #0e76a8;
   color: white;
   transform: rotateY(180deg);
+  overflow-x: auto;
 }
 .portfolio-container_project-container_inner_back-container {
   margin-bottom: 20px;
@@ -223,8 +288,11 @@ export default {
 }
 .portfolio-container_project-container_inner_back_tools {
   padding: 0;
-  margin: 0;
+  margin: 0 0 20px 0;
   list-style-type: none;
+}
+.portfolio-container_project-container_inner_back_tools_tool {
+  margin: 5px 0;
 }
 .portfolio-container_project-container_project-name {
   color: #0e76a8;
