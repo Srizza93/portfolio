@@ -23,9 +23,7 @@
             </div>
             <div class="portfolio-container_project-container_inner_back">
               <div
-                class="
-                  portfolio-container_project-container_inner_back-container
-                "
+                class="portfolio-container_project-container_inner_back-container"
               >
                 <h4
                   class="portfolio-container_project-container_inner_back_title"
@@ -33,16 +31,12 @@
                   Description
                 </h4>
                 <span
-                  class="
-                    portfolio-container_project-container_inner_back_description
-                  "
+                  class="portfolio-container_project-container_inner_back_description"
                   >{{ project.description }}</span
                 >
               </div>
               <div
-                class="
-                  portfolio-container_project-container_inner_back-container
-                "
+                class="portfolio-container_project-container_inner_back-container"
               >
                 <h4
                   class="portfolio-container_project-container_inner_back_title"
@@ -52,11 +46,10 @@
                 </h4>
                 <ul
                   class="portfolio-container_project-container_inner_back_tools"
+                  v-if="project.functionalities"
                 >
                   <li
-                    class="
-                      portfolio-container_project-container_inner_back_tools_tool
-                    "
+                    class="portfolio-container_project-container_inner_back_tools_tool"
                     v-for="(functionality, index) in project.functionalities"
                     :key="index + '/' + functionality"
                   >
@@ -72,9 +65,7 @@
                   class="portfolio-container_project-container_inner_back_tools"
                 >
                   <li
-                    class="
-                      portfolio-container_project-container_inner_back_tools_tool
-                    "
+                    class="portfolio-container_project-container_inner_back_tools_tool"
                     v-for="(tool, index) in project.tools"
                     :key="index + '/' + tool"
                   >
@@ -217,6 +208,14 @@ export default {
           link: "https://srizza93.github.io/cv-email-html/",
           description: "Personal CV in HTML-email format - Responsive",
           tools: ["HTML"],
+        },
+        {
+          id: 7,
+          name: "Advent Challenges",
+          image: "advent.png",
+          link: "https://srizza93.github.io/advent-challenges/deploy/index.html#/",
+          description: "Collection of 24 Coding Challenges - Responsive",
+          tools: ["HTML", "CSS", "JS", "Vue", "Vue-router"],
         },
       ],
     };
