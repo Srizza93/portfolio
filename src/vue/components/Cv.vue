@@ -135,14 +135,18 @@ export default {
         },
         {
           id: 7,
-          name: "Webpack",
+          name: "Vue Router",
         },
         {
           id: 8,
-          name: "Jest",
+          name: "Webpack",
         },
         {
           id: 9,
+          name: "Jest",
+        },
+        {
+          id: 10,
           name: "Git",
         },
       ],
