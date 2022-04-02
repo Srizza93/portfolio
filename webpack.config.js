@@ -17,6 +17,11 @@ module.exports = {
     path: path.resolve(__dirname, "deploy"),
     clean: true,
   },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000,
+  },
   optimization: {
     splitChunks: {
       chunks: "all",
