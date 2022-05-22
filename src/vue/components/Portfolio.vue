@@ -89,6 +89,14 @@ export default {
       projects: [
         {
           id: 1,
+          name: "E-commerce 2",
+          image: "advent.png",
+          link: "https://srizza93.github.io/sales/",
+          description: "E-commerce website",
+          tools: ["HTML", "CSS", "JS", "Vue", "Vue-router", "Webpack"],
+        },
+        {
+          id: 2,
           name: "Advent Challenges",
           image: "advent.png",
           link: "https://srizza93.github.io/advent-challenges/deploy/index.html#/",
@@ -96,7 +104,7 @@ export default {
           tools: ["HTML", "CSS", "JS", "Vue", "Vue-router"],
         },
         {
-          id: 2,
+          id: 3,
           name: "Social Network",
           image: "social.png",
           link: "https://srizza93.github.io/social/deploy/index.html",
@@ -123,7 +131,7 @@ export default {
           ],
         },
         {
-          id: 3,
+          id: 4,
           name: "Movie Streaming",
           image: "streaming.png",
           link: "https://srizza93.github.io/streaming/deploy/index.html",
@@ -149,7 +157,7 @@ export default {
           ],
         },
         {
-          id: 4,
+          id: 5,
           name: "E-commerce",
           image: "e-commerce.png",
           link: "https://srizza93.github.io/e-commerce/deploy/index.html",
@@ -178,7 +186,7 @@ export default {
           ],
         },
         {
-          id: 5,
+          id: 6,
           name: "Tooltip plugin",
           image: "tooltip.png",
           link: "https://srizza93.github.io/tooltip/",
@@ -195,7 +203,7 @@ export default {
           tools: ["HTML", "CSS", "JS"],
         },
         {
-          id: 6,
+          id: 7,
           name: "Square task",
           image: "square-task.png",
           link: "https://srizza93.github.io/square_task/",
@@ -210,7 +218,7 @@ export default {
           tools: ["HTML", "CSS", "JS"],
         },
         {
-          id: 7,
+          id: 8,
           name: "HTML Email layout",
           image: "email-layout.png",
           link: "https://srizza93.github.io/cv-email-html/",
