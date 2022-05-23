@@ -90,10 +90,21 @@ export default {
         {
           id: 1,
           name: "E-commerce 2",
-          image: "advent.png",
+          image: "e-commerce-2.png",
           link: "https://srizza93.github.io/sales/",
-          description: "E-commerce website",
-          tools: ["HTML", "CSS", "JS", "Vue", "Vue-router", "Webpack"],
+          description:
+            "E-commerce website - Complete Mocked Customer Experience - Responsive",
+          functionalities: [
+            "Products filtering and sort system",
+            "Product details page",
+            "Cart access and functionality",
+            "Purchase process",
+            "Personal info validation",
+            "Credit card validation",
+            "Loading page",
+            "Purchase confirmation",
+          ],
+          tools: ["HTML", "CSS", "JS", "Vue", "Vuex", "Vue-router", "Webpack"],
         },
         {
           id: 2,
